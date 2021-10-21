@@ -1,3 +1,3 @@
 # web_prod
-test
+*   test
 # 本文档为项目测试
