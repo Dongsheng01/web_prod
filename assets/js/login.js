@@ -68,7 +68,7 @@ $(function() {
             method: "POST",
             data: $(this).serialize(),
             success: function(res) {
-                console.log(res);
+                // console.log(res);
                 // 判断是否成功
                 if (res.status !== 0) {
                     return layer.msg(res.message);
