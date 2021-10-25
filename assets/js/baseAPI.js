@@ -9,7 +9,20 @@ $.ajaxPrefilter(function(option) {
     if (option.url.indexOf('/my/') !== -1) {
         // console.log(111);
         option.headers = {
-            Authorization: localStorage.getItem("token") || ""
+            Authorization: localStorage.getItem("token") || "",
+        }
+    }
+
+    // 回调处理未登录返回登陆 清理本地存储
+    option.complete = function(res) {
+        console.log(res.responseJSON);
+        // 判断返回账户信息是否正常
+        if (res.responseJSON.status === 1 && res.responseJSON.message == '身份认证失败！') {
+            // 清空本地存储
+            localStorage.removeItem('token');
+
+            // 跳转回登陆界面
+            location.href = "./login.html"
         }
     }
 })

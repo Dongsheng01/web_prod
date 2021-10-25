@@ -39,7 +39,20 @@ function getUserInfo() {
             }
             // layer.msg(res.message);
             renderAvatar(res.data);
-        }
+        },
+        // 完成回调
+        // complete: function(res) {
+        //     console.log(res.responseJSON);
+        //     // 判断返回账户信息是否正常
+        //     if (res.responseJSON.status === 1 && res.responseJSON.message == '身份认证失败！') {
+        //         // 清空本地存储
+        //         localStorage.removeItem('token');
+
+        //         // 跳转回登陆界面
+        //         location.href = "./login.html"
+        //     }
+        // }
+
     })
 }
 
