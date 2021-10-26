@@ -64,7 +64,7 @@ function renderAvatar(user) {
     $('#welcome').html(`欢迎 ${username}`);
 
     // 获取用户名第一个字符
-    var first = user.username[0].toUpperCase();
+    var first = user.nickname[0].toUpperCase() || user.username[0].toUpperCase();
 
     // 判断用户是否设置头像
     if (user.user_pic !== null) {

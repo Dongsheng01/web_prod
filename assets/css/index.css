@@ -38,9 +38,15 @@ a {
   top: 4px;
 }
 .myUser > img {
+  display: none;
   width: 40px;
   height: 40px;
 }
+.myUser #welcome {
+  position: relative;
+  top: 3px;
+}
 .layui-side-scroll .users {
   margin-right: 10px;
+  margin-left: 20%;
 }
