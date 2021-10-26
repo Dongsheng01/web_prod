@@ -46,6 +46,9 @@ a {
   position: relative;
   top: 3px;
 }
+.myUser #userImg {
+  margin-left: 20%;
+}
 .layui-side-scroll .users {
   margin-right: 10px;
   margin-left: 20%;
