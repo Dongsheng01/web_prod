@@ -15,7 +15,7 @@ $.ajaxPrefilter(function(option) {
 
     // 回调处理未登录返回登陆 清理本地存储
     option.complete = function(res) {
-        console.log(res.responseJSON);
+        // console.log(res.responseJSON);
         // 判断返回账户信息是否正常
         if (res.responseJSON.status === 1 && res.responseJSON.message == '身份认证失败！') {
             // 清空本地存储
